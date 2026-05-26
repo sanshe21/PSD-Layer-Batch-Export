@@ -448,7 +448,7 @@ class PSDBatchCoverApp:
                  bg=self.BG, fg=self.DIM,
                  font=("Microsoft YaHei UI", 10)).pack(side=tk.LEFT, padx=(8, 0))
 
-        # 右上角按钮（从左到右：关于此软件 → 打开输出文件夹 → 批量导出 PNG）
+        # 右上角按钮（从左到右：关于此软件 → 清空 → 打开输出文件夹 → 批量导出 PNG）
         self.export_btn = tk.Button(top, text="  批量导出 PNG  ",
                                     bg=self.GREEN, fg="#000",
                                     activebackground="#44dd66",
@@ -468,6 +468,15 @@ class PSDBatchCoverApp:
                                   command=self._open_output,
                                   state=tk.DISABLED)
         self.open_btn.pack(side=tk.RIGHT, padx=(0, 8))
+
+        clear_btn = tk.Button(top, text="清空",
+                              bg=self.CARD, fg="#ff453a",
+                              activebackground=self.BDR,
+                              font=("Microsoft YaHei UI", 9),
+                              relief=tk.FLAT, padx=8, pady=3,
+                              cursor="hand2",
+                              command=self._clear_all)
+        clear_btn.pack(side=tk.RIGHT, padx=(0, 8))
 
         about_btn = tk.Button(top, text="关于此软件",
                               bg=self.CARD, fg=self.TXT,
@@ -1556,6 +1565,34 @@ class PSDBatchCoverApp:
         p = self.output_dir.get()
         if os.path.isdir(p):
             os.startfile(p)
+
+    def _clear_all(self):
+        """清空主界面所有状态。"""
+        try:
+            self.psd_path.set("")
+            self.photos_dir.set("")
+            self.output_dir.set("")
+            self.photos = []
+            self.current_index = 0
+            self.export_btn.config(state=tk.DISABLED)
+            self.open_btn.config(state=tk.DISABLED)
+            self.status_label.config(text="就绪")
+            # 清空缩略图条
+            for w in self.strip_inner.winfo_children():
+                w.destroy()
+            # 清空预览画布
+            self.preview_canvas.delete("all")
+            self.renderer = None
+            # 清空左侧面板
+            self.layer_listbox.delete(0, tk.END)
+            self.layer_listbox.selection_clear(0, tk.END)
+            self.layer_canvas.delete("all")
+            self.layer_info.config(text="")
+            self.param_label.config(text="未选择照片")
+            self.reset_btn.config(state=tk.DISABLED)
+        except Exception as e:
+            from tkinter import messagebox
+            messagebox.showerror("清空失败", str(e))
 
     def _show_about(self):
         """显示关于我们弹窗。"""
