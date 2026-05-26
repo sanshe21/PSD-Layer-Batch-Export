@@ -1,4 +1,4 @@
-# 封面自动生成 v2.0 (FM Cover Auto)
+# PS图层批量替换导出 (FM-Cover-Auto)
 
 <p align="center">
   <img src="assets/app_icon.ico" width="96" height="96" alt="FM Cover Auto Logo">
@@ -19,7 +19,7 @@
 
 ## 项目介绍
 
-**封面自动生成 v2.0** 是一款面向设计师、自媒体创作者和批量处理需求的桌面工具。它能够基于 Photoshop PSD 模板，自动识别可替换的图层，将指定文件夹中的照片批量替换进去，并导出为 PNG 格式的封面图片。
+**PS图层批量替换导出** 是一款面向设计师、自媒体创作者和批量处理需求的桌面工具。它能够基于 Photoshop PSD 模板，自动识别可替换的图层，将指定文件夹中的照片批量替换进去，并导出为 PNG 格式的封面图片。
 
 核心解决了一个长期痛点：**当需要为几十甚至上百张照片套用同一个 PSD 模板时，手动在 Photoshop 中逐张替换、调整、导出极其耗时**。本工具将这一过程自动化，从数小时缩短到几分钟。
 
@@ -55,6 +55,8 @@
 
 ## 下载
 
+前往 [Releases](https://github.com/sanshe21/PSD-Layer-Batch-Export/releases) 页面下载最新版本。
+
 | 版本 | 文件 | 说明 |
 |------|------|------|
 | 安装版 | `封面自动生成v2.0.Setup.exe` | 完整安装向导，支持卸载程序 |
@@ -86,7 +88,7 @@
 ## 源码结构
 
 ```
-FM-Cover-Auto/
+PSD-Layer-Batch-Export/
 ├── src/
 │   ├── main.py           # 主程序（GUI + 渲染引擎）
 │   ├── installer.py      # Windows 安装向导
@@ -95,9 +97,6 @@ FM-Cover-Auto/
 │   └── gen_icon.py       # 图标生成脚本
 ├── assets/
 │   └── app_icon.ico      # 应用图标
-├── release/              # 发布二进制文件
-│   ├── 封面自动生成v2.0.Setup.exe
-│   └── 封面自动生成_便携版.exe
 └── README.md
 ```
 
@@ -118,6 +117,6 @@ MIT License — 自由使用、修改和分发。
 
 - **作者**：SANSHE三社
 - **反馈邮箱**：SANSHEX@163.com
-- **GitHub 仓库**：https://github.com/sanshe21/FM-Cover-Auto
+- **GitHub 仓库**：https://github.com/sanshe21/PSD-Layer-Batch-Export
 
 欢迎提交 Issue 和 Pull Request！
