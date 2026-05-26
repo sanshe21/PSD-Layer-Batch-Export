@@ -55,14 +55,12 @@
 
 ## 下载
 
-前往 [Releases](https://github.com/sanshe21/PSD-Layer-Batch-Export/releases) 页面下载最新版本。
-
-| 版本 | 文件 | 说明 |
-|------|------|------|
-| 安装版 | `封面自动生成v2.0.Setup.exe` | 完整安装向导，支持卸载程序 |
-| 便携版 | `封面自动生成_便携版.exe` | 单文件，无需安装，双击即用 |
-
 > 系统要求：Windows 10/11，64位
+
+| 版本 | 说明 | 直接下载 |
+|------|------|----------|
+| 📦 安装版 | 完整安装向导，支持自定义安装路径、桌面快捷方式、卸载程序 | [下载 Setup.exe](https://github.com/sanshe21/PSD-Layer-Batch-Export/releases/download/v2.0/v2.0.Setup.exe) |
+| 💾 便携版 | 单文件，无需安装，双击即用，适合 U 盘携带 | [下载 Portable.exe](https://github.com/sanshe21/PSD-Layer-Batch-Export/releases/download/v2.0/default.exe) |
 
 ## 使用教程
 

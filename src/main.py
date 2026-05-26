@@ -1588,7 +1588,7 @@ class PSDBatchCoverApp:
         info_items = [
             ("作者：", "SANSHE三社"),
             ("反馈邮箱：", "SANSHEX@163.com"),
-            ("开源地址：", "https://github.com/SANSHE3/FM-Cover-Auto"),
+            ("开源地址：", "https://github.com/sanshe21?tab=repositories"),
         ]
         for label, value in info_items:
             row = tk.Frame(win, bg=self.BG)
