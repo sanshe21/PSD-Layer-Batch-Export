@@ -12,3 +12,5 @@ dist_setup/
 dist_uninstall/
 封面自动生成v2.0.Setup.spec
 Uninstall.spec
+release/
+*.exe
